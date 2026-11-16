@@ -1,0 +1,110 @@
+/* Global styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Main page content */
+main {
+    flex: 1;
+}
+
+/* Navigation */
+.navbar-brand {
+    letter-spacing: 0.3px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+}
+
+/* Event cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Event card titles */
+.card-title a {
+    color: #212529;
+}
+
+.card-title a:hover {
+    color: #0d6efd;
+}
+
+/* Form fields */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    padding: 10px 12px;
+    border-color: #dee2e6;
+}
+
+/* Focus state */
+.form-control:focus,
+.form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Form labels */
+.form-label {
+    font-weight: 500;
+}
+
+/* Button styling */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    box-shadow: 0 2px 5px rgba(13, 110, 253, 0.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* Homepage hero section */
+.home-hero {
+    background: linear-gradient(135deg, #ffffff, #eaf2ff);
+    border-radius: 16px;
+    margin-top: 1rem;
+    padding: 4rem 1.5rem !important;
+}
+
+/* Homepage heading */
+.home-hero h1 {
+    color: #172554;
+}
+
+/* Homepage description */
+.home-hero .lead {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigation bar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}

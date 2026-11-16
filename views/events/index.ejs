@@ -1,0 +1,88 @@
+<section>
+    <!-- Page heading -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <div>
+            <h1 class="fw-bold mb-2"><%= title %></h1>
+            <p class="text-secondary mb-0">
+                Manage, organise and keep track of your community events.
+            </p>
+        </div>
+
+        <a href="/events/new" class="btn btn-primary">
+            + Create New Event
+        </a>
+    </div>
+
+    <!-- Events section -->
+    <h2 class="h4 mb-3">Your Events</h2>
+
+    <% if (events.length === 0) { %>
+
+        <!-- Displayed when there are no events -->
+        <div class="card shadow-sm text-center p-5">
+            <h3 class="h5">No events yet</h3>
+            <p class="text-secondary">
+                Start by creating your first community event.
+            </p>
+            <a href="/events/new" class="btn btn-primary align-self-center">
+                Create Your First Event
+            </a>
+        </div>
+
+    <% } else { %>
+
+        <!-- Display event cards -->
+        <div class="row g-4">
+
+            <% events.forEach(event => { %>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body">
+
+                            <h3 class="h5 card-title">
+                                <a href="/events/<%= event.eventId %>"
+                                   class="text-decoration-none">
+                                    <%= event.title %>
+                                </a>
+                            </h3>
+
+                            <p class="card-text text-secondary">
+                                <%= event.description %>
+                            </p>
+
+                            <p class="mb-2">
+                                <strong>Date:</strong>
+                                <%= event.date %>
+                            </p>
+
+                            <p class="mb-3">
+                                <strong>Location:</strong>
+                                <%= event.location %>
+                            </p>
+
+                            <p>
+                                <strong>Status:</strong>
+
+                                <% if (event.isActive) { %>
+                                    <span class="badge bg-success">Active</span>
+                                <% } else { %>
+                                    <span class="badge bg-secondary">Inactive</span>
+                                <% } %>
+                            </p>
+
+                            <a href="/events/<%= event.eventId %>"
+                               class="btn btn-outline-primary btn-sm">
+                                View Event
+                            </a>
+
+                        </div>
+                    </article>
+                </div>
+
+            <% }) %>
+
+        </div>
+
+    <% } %>
+</section>
